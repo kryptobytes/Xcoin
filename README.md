@@ -1,4 +1,4 @@
-XCoin (XCO)
+XCoin (QQQ)
 
 Webapp Custom Coin Creation Service.
 
