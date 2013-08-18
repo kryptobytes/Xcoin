@@ -875,8 +875,10 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
     if (pindexLast == NULL)
         return nProofOfWorkLimit;
 
+    const int height = pindexLast->nHeight + 1;
+
     // Only change once per interval
-    if ((pindexLast->nHeight+1) % nInterval != 0)
+    if (height % nInterval != 0)
     {
         // Special difficulty rule for testnet:
         if (fTestNet)
